@@ -148,3 +148,27 @@ $(document).ready(function() {
 });
 
 // ===== Сворачивание содержимого таблицы_end =====//
+
+
+// ===== Слайдер. Настройки плагина OwlCarousel_start =====//
+
+$(document).ready(function() {
+	$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+			0:{
+					items:1
+			},
+			600:{
+					items:1
+			},
+			1000:{
+					items:1
+			}
+    }
+	});
+});
+
+// ===== Настройки плагина OwlCarousel_end =====//

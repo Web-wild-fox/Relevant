@@ -172,3 +172,20 @@ $(document).ready(function() {
 });
 
 // ===== Настройки плагина OwlCarousel_end =====//
+
+$(document).ready(function() {
+
+	$('.sec-ready__btn-expand-curtail').click(function() {
+
+		$(this).toggleClass('sec-ready__btn-expand');
+		//  Изменение "Плюса" на "Крест"
+
+		$('.btn-expand-curtail__img-icon', this).toggleClass('btn-expand-curtail__img-icon-expand');
+		//  Изменение цвета для закрывающей кнопки
+
+		$(this).prev('.inner-plus__text-block').toggleClass('inner-plus__text-block-expand');
+		// Изменение высоты блока с текстом при клике на кнопку
+
+	});
+
+});

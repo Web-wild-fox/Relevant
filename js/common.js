@@ -173,6 +173,9 @@ $(document).ready(function() {
 
 // ===== Настройки плагина OwlCarousel_end =====//
 
+
+// ===== Сворачивание содержимого блока_start =====//
+
 $(document).ready(function() {
 
 	$('.sec-ready__btn-expand-curtail').click(function() {
@@ -189,3 +192,5 @@ $(document).ready(function() {
 	});
 
 });
+
+// ===== Сворачивание содержимого блока_end =====//

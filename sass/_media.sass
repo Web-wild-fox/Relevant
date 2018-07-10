@@ -1,0 +1,856 @@
+@import "vars"
+
+// -----------------------CUSTOM_STYLES---------------------//
+
+/*==========  Desktop First  ==========*/
+
+@media only screen and (max-width : 1450px)
+  .img-logo
+    margin-right: 35px
+
+  .block-layout__dotted-line
+    width: 100px
+
+  .block-layout__dotted-line_left
+    margin-right: 30px
+    right: 0
+
+  .block-layout__dotted-line_right
+    margin-left: 30px
+    left: 0	
+    top: 65px
+
+  .purchase-returns__dotted-line
+    top: 130px
+
+  .product__dotted-line
+    top: 90px
+
+  .stock__dotted-line
+    width: 100px
+    top: 75px
+
+@media only screen and (max-width : 1211px)
+  .img-logo
+    margin-top: 13px
+
+  .sec-header__inner
+    padding-left: 26%
+    margin-top: 60px
+    margin-bottom: 120px
+
+  .sec-header__title
+    font-size: $fsz-title-average
+
+  .sec-header__text
+    font-size: $fsz-text-average
+
+  .sec-solutions__h2-title,
+  .sec-functional__h2-title,
+  .sec-assembly__h2-title,
+  .sec-step-1__h3-title,
+  .sec-step-2__h3-title,
+  .sec-step-3__h3-title,
+  .sec-step-4__h3-title,
+  .sec-result__h2-title,
+  .sec-ready__h2-title,
+  .sec-why-we__h2-title
+    font-size: $fsz-title-little
+
+  .sec-step-1__h4-title,
+  .sec-step-2__h4-title,
+  .sec-step-3__h4-title,
+  .sec-step-4__h4-title,
+  .h4-title
+    font-size: $fsz-text-huge
+
+  .sec-step-1__text,
+  .sec-step-2__text,
+  .sec-step-3__text,
+  .sec-step-4__text
+    font-size: $fsz-text-little
+
+  .block-layout__dotted-line
+    visibility: hidden
+
+  .block-layout__purchase-returns,
+  .block-layout__advantage,
+  .block-layout__stock
+    right: 0
+
+  .sec-step-4__item-number
+    p
+      margin-top: 6px
+    font-size: $fsz-title-average
+    margin: 0
+    top: 50%
+    margin-top: -36px
+    width: 60px
+    height: 60px
+
+  .sec-step-4__item-number_odd
+    right: 0
+    margin-right: 30px
+
+  .sec-step-4__item-number_even
+    left: 0
+    margin-left: 30px
+
+  .sec-step-4__item-text
+    font-size: $fsz-text-small
+    margin: 0
+    padding: 40px 130px
+
+  .slider-catalog-inner__title_right
+    right: 40px
+
+  .slider-catalog-inner__title_left
+    left: 0
+
+  .sec-assembly__head-text
+    font-size: $fsz-text-huge
+    margin: 40px 0
+
+  .sec-assembly__target-text,
+  .item__target-text
+    font-size: $fsz-text-little
+
+  .sec-solutions__img-inner
+    padding-top: 80px
+    padding-bottom: 80px
+
+  .sec-solutions__img,
+  .sec-solutions__img-preview
+    height: 300px
+
+  .sec-solutions__img-overlay
+    &::before
+      margin-top: 55px
+
+  .sec-solutions__text-overlay
+    font-size: $fsz-title-little*0.8
+    margin-top: 190px
+    padding-left: 16%
+    padding-right: 16%
+
+  .sec-solutions__text-preview-overlay
+    font-size: $fsz-text-average
+
+  .sec-functional__h3-title
+    margin-bottom: 22px
+
+  .sec-functional__tag-inner
+    margin-bottom: 0
+
+  .sec-functional__tag
+    padding: 10px 20px
+    margin-bottom: 8px
+    font-size: $fsz-text-little*0.8
+    &::before
+      font-size: $fsz-text-small
+      top: 6px
+
+  .sec-functional__p-text
+    font-size: $fsz-text-little
+    margin-top: 14px
+
+  .sec-functional__link
+    font-size: $fsz-text-small
+    &::before
+      font-size: $fsz-text-small
+
+  .text-block__h4-title
+    font-size: $fsz-text-huge
+
+  .text-block__p-text
+    font-size: $fsz-text-little
+
+  .p-text__profit
+    padding-bottom: 25px
+
+  .advantage-block__text,
+  .sec-add-info__container
+    font-size: $fsz-text-little
+
+@media only screen and (max-width : 1000px)
+  .sec-solutions__h2-title,
+  .sec-functional__h2-title,
+  .sec-assembly__h2-title,
+  .sec-step-1__h3-title,
+  .sec-step-2__h3-title,
+  .sec-step-3__h3-title,
+  .sec-step-4__h3-title,
+  .sec-result__h2-title,
+  .sec-ready__h2-title,
+  .sec-why-we__h2-title
+    font-size: $fsz-text-huge
+
+  .sec-solutions__img-preview
+    width: 50%
+
+  .sec-solutions__img-overlay
+    &::before
+      margin-top: 40px
+
+  .sec-solutions__text-preview-overlay,
+  .sec-solutions__text-overlay
+    font-size: $fsz-title-little*0.8
+    margin-top: 180px
+    padding-left: 16%
+    padding-right: 16%
+
+  .sec-functional__shop-inner,
+  .sec-functional__corp-inner,
+  .sec-functional__catalog-inner
+    font-size: 0
+
+  .sec-functional__img
+    width: 45%
+
+  .sec-functional__text-inner
+    width: 55%
+  
+  .sec-assembly__item
+    padding-left: 120px
+    padding-top: 40px
+    padding-bottom: 40px
+
+  .sec-assembly__item-icon
+    top: 50%
+    margin-top: -20px
+    left: 40px
+
+  .sec-step-1__text
+    margin-bottom: 20px
+
+  .sec-step-1__img,
+  .sec-step-1__img-text
+    display: none
+
+  .sec-step-2__img-layout-inner
+    display: none
+
+  .sec-step-4__items
+    width: 70%
+
+  .sec-result__inner-head-img
+    width: 100%
+
+  .sec-result__container
+    // text-align: center
+
+  .sec-result__inner-head-img
+    margin-top: 0
+
+  .sec-result__title,
+  .slider-catalog-inner__title,
+  .slider-catalog-inner__title_right,
+  .slider-catalog-inner__title_left
+    position: static
+    display: inline-block
+    &::before
+      display: none
+
+  .sec-result__slider-catalog-inner
+	  width: 70%
+
+  .sec-result__slider-title 
+    position: static
+    display: block
+    width: auto
+    margin: 0 auto
+    right: auto
+
+  .sec-result__text-catalog-inner_left,
+  .sec-result__text-catalog-inner_right 
+    left: auto
+    right: auto
+
+  .owl-nav
+    bottom: 400px
+
+  .owl-carousel .owl-nav button.owl-prev
+    left: -40px
+
+  .owl-carousel .owl-nav button.owl-next
+    right: -10px
+
+  .img-block__icon-text
+    font-size: $fsz-text-small
+    margin: 30px 0
+
+  .sec-why-we__inner-achievements
+    text-align: center
+
+  .sec-why-we__inner-advantages
+    text-align: center
+
+  .sec-why-we__achievements-block,
+  .sec-why-we__advantage-block
+    min-width: 300px
+
+  .text-block__h4-title
+    padding: 30px
+    text-align: center 
+
+  .text-block__p-text,
+  .text-block__items
+    padding: 0 30px 
+
+  .text-block__items
+    padding-top: 20px
+
+@media only screen and (max-width : 860px)
+  #modal-city-selection 
+    background: #fff
+    padding: 16px 15px 18px
+    margin: 25px auto
+    max-width: 60%
+    min-width: 260px
+    width: 60%
+
+  .sec-header__inner
+    padding-left: 20%
+    margin-top: 80px
+    margin-bottom: 80px
+
+  .sec-header__title
+    font-size: $fsz-title-small
+
+  .sec-header__text
+    font-size: $fsz-text-small
+
+  .sec-solutions__img-preview,
+  .sec-solutions__img
+    width: 50%
+    height: 340px
+
+  .sec-solutions__img-overlay
+    &::before
+      margin-top: 50px
+
+  .sec-solutions__text-preview-overlay,
+  .sec-solutions__text-overlay
+    margin-top: 190px
+
+  .sec-solutions__img-second
+    margin-bottom: 0px
+
+  .sec-functional__img
+    display: none
+
+  .sec-functional__text-inner
+    width: 100%
+
+  .corp-inner__tag-inner
+    .sec-functional__tag
+      margin-right: 0
+      margin-left: 10px
+
+  .shop-inner__h3-title,
+  .shop-inner__tag-inner,
+  .shop-inner__p-text,
+  .shop-inner__link,
+  .corp-inner__h3-title,
+  .corp-inner__tag-inner,
+  .corp-inner__p-text,
+  .corp-inner__link,
+  .catalog-inner__h3-title,
+  .catalog-inner__tag-inner,
+  .catalog-inner__p-text,
+  .catalog-inner__link
+    margin-left: 0
+    margin-right: 0
+
+  .table__line-cell_size-3
+    width: 90%
+
+  .table__line-cell_size-4
+    width: 10%
+
+  .table__line-hide-cell_size-5
+    width: 100%
+    border-bottom: 1px solid #ddd
+
+  .table__line-hide-cell_size-6
+    width: 100%
+    border-bottom: 1px solid #ddd
+
+  .table__line-hide-cell_size-7
+    width: 100%
+
+  .table__line-hide-cell-text	
+    &::before
+      display: none
+
+  .sec-step-4__items
+    width: 90%
+
+  .corp-inner__h3-title,
+  .corp-inner__tag-inner
+    text-align: right
+
+  .sec-functional__p-text
+    text-align: justify
+
+  .inner-head-img__img-before
+    left: 200px
+
+@media only screen and (max-width : 790px)
+  #modal-city-selection 
+    background: #fff
+    padding: 16px 15px 18px
+    margin: 25px auto
+    max-width: 400px
+    min-width: 260px
+    width: 400px
+
+  #modal-feedback
+    max-width: 60%
+    width: 100%
+    min-width: 60%
+
+  .sec-header__inner
+    padding-left: 10%
+
+  .owl-nav
+    bottom: 350px
+
+  .inner-head-img__img-before
+    left: 150px
+
+  .inner-plus__img-block
+    width: 5%
+    &::before
+      position: absolute
+      content: ''
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+      width: 5%
+      height: 100%
+      z-index: -1
+
+  .inner-plus__text-block
+    display: inline-block
+    width: 95%
+
+  .img-block__icon
+    display: none
+
+  .img-block__icon-text
+    display: none
+
+@media only screen and (max-width : 640px)
+  #modal-city-selection 
+    background: #fff
+    padding: 16px 15px 18px
+    margin: 25px auto
+    max-width: 400px
+    min-width: 260px
+    width: 400px
+
+  #modal-feedback
+    background: #fff
+    padding: 30px 40px 
+    max-width: 70%
+    width: 100%
+    min-width: 70%
+
+  .img-logo
+    width: 146px
+    height: 37px
+    margin-right: 20px
+    margin-top: 10px
+
+  .sec-solutions__img-inner
+    padding-top: 60px
+    padding-bottom: 60px
+
+  .sec-solutions__img-preview,
+  .sec-solutions__img
+    display: block
+    width: 90%
+    height: 300px
+    margin: 0 auto
+    margin-bottom: 40px
+
+  .sec-solutions__img-preview
+    display: none
+  
+  .sec-solutions__img-overlay
+    &::before
+      margin-top: 40px
+
+  .sec-solutions__text-preview-overlay,
+  .sec-solutions__text-overlay
+    margin-top: 180px
+
+  .sec-functional__text-inner
+    display: block
+    width: 90%
+    margin: 0 auto
+
+  .sec-assembly__target-text_inner
+    padding-top: 40px
+    padding-bottom: 40px
+    width: 80%
+    margin: 0 auto
+
+  .inner-head-img__img-before
+    width: 400px
+
+  .inner-head-img__img-after
+    width: 300px
+
+  .inner-head-img__img-after-inner
+    left: 60px
+
+  .inner-head-img__img-before
+    left: 120px
+
+  .sec-result__title,
+  .slider-catalog-inner__title
+    padding: 14px 8px
+    border-radius: 2px
+
+  .sec-result__slider-catalog-inner 
+    width: 75%
+
+  .item-slide__img-before
+    left: -30px
+
+  .item-icon
+    top: 0
+    margin-top: 3px
+
+@media only screen and (max-width : 480px)
+  #modal-city-selection 
+    background: #fff
+    padding: 16px 15px 18px
+    margin: 25px auto
+    max-width: 280px
+    min-width: 260px
+    width: 280px
+
+  .img-logo 
+    margin-right: 15px
+
+  .sec-header__inner
+    padding-left: 5%
+    padding-right: 5%
+    margin-top: 60px
+
+  .sec-header__title
+    font-size: $fsz-title-little
+
+  .sec-header__text
+    font-size: $fsz-text-little
+
+  .sec-solutions__img-preview,
+  .sec-solutions__img
+    height: 280px
+
+  .sec-solutions__img-overlay
+    &::before
+      margin-top: 25px
+
+  .sec-solutions__text-preview-overlay,
+  .sec-solutions__text-overlay
+    margin-top: 160px
+
+  .sec-functional__text-inner
+    width: 96%
+
+  .sec-assembly__target-text_inner
+    padding-top: 20px
+    padding-bot9om: 20px
+    width: 90%
+    margin: 0 auto
+
+  .sec-assembly__item
+    padding-left: 80px
+    padding-top: 30px
+    padding-bottom: 30px
+
+  .sec-assembly__item-icon
+    top: 50%
+    margin-top: -20px
+    left: 20px
+
+  .sec-step-4__items
+    width: 100%
+
+  .inner-head-img__img-before
+    width: 280px
+
+  .inner-head-img__img-after
+    width: 200px
+
+  .owl-nav
+    bottom: 280px
+
+  .owl-carousel .owl-nav button.owl-prev 
+    left: -50px
+
+  .owl-carousel .owl-nav button.owl-next
+    right: -20px
+
+  .item-slide__img-before 
+      left: -20px
+
+@media only screen and (max-width : 440px)
+  #modal-city-selection 
+    background: #fff
+    padding: 16px 15px 18px
+    margin: 25px auto
+    max-width: 280px
+    min-width: 260px
+    width: 280px
+
+  #modal-feedback
+    padding: 24px 36px 
+    max-width: 80%
+    width: 100%
+    min-width: 80%
+  
+  .sec-solutions__img-inner
+    padding-top: 50px
+    padding-bottom: 50px
+
+  .sec-solutions__img-preview,
+  .sec-solutions__img
+    width: 100%
+    height: 240px
+
+  .sec-solutions__img-overlay
+    &::before
+      margin-top: 20px
+
+  .sec-solutions__text-preview-overlay,
+  .sec-solutions__text-overlay
+    margin-top: 150px
+    font-size: $fsz-text-average
+
+  .sec-functional__h2-title
+    margin-bottom: 50px
+
+  .sec-functional__text-inner
+    width: 100%
+
+  .sec-step-4__item-text 
+    padding: 30px 100px
+
+  .sec-step-4__item-number
+    p
+      margin-top: 10px
+    font-size: $fsz-text-big
+    margin-top: -29px
+    color: #ebebeb
+    width: 50px
+    height: 50px
+    border: 4px solid #ebebeb
+
+  .sec-step-4__item-number_odd
+    right: 0
+    margin-right: 20px
+
+  .sec-step-4__item-number_even
+    left: 0
+    margin-left: 20px
+
+  .inner-head-img__img-before
+    width: 250px
+
+  .inner-head-img__img-after
+    width: 180px
+
+  .owl-carousel .owl-nav button.owl-prev 
+    left: -50px
+
+  .owl-carousel .owl-nav button.owl-next
+    right: -40px
+
+  .item-slide__img-after
+    right: -10px
+
+  .item-slide__img-before 
+    left: -15px
+
+@media only screen and (max-width : 370px)
+  #modal-city-selection 
+    background: #fff
+    padding: 16px 15px 18px
+    margin: 25px auto
+    max-width: 260px
+    min-width: 260px
+    width: 260px
+
+  .img-logo
+    width: 180px
+    height: 46px
+    margin-top: 14px
+
+  .sec-header__inner
+    padding-left: 3%
+    padding-right: 3%
+
+  .sec-solutions__img-preview,
+  .sec-solutions__img
+    width: 100%  
+    height: 220px
+
+  .sec-solutions__img-overlay
+    &::before
+      background-size: 100px
+      margin-left: -50px
+      margin-top: 30px
+
+  .sec-solutions__text-preview-overlay,
+  .sec-solutions__text-overlay
+    margin-top: 120px
+    font-size: $fsz-text-small
+
+  .sec-functional__tag
+    padding: 8px 16px
+    margin-bottom: 6px
+    font-size: $fsz-text-little*0.8
+    &::before
+      font-size: $fsz-text-little*0.8
+      top: 6px
+
+  .corp-inner__tag-inner
+    .sec-functional__tag
+      margin-right: 0
+      margin-left: 10px
+
+  .sec-assembly__item 
+    padding-left: 30px
+    padding-top: 20px
+    padding-bottom: 20px
+
+  .sec-assembly__item-icon
+    display: none
+
+  .sec-step-4__h4-title
+    margin-bottom: 50px
+
+  .sec-step-4__item-text 
+    padding: 20px 80px
+
+  .sec-step-4__item-number
+    p
+      margin-top: 8px
+    font-size: $fsz-text-average
+    margin-top: -20px
+    color: #ebebeb
+    width: 40px
+    height: 40px
+    border: 2px solid #ebebeb
+
+  .sec-step-4__item-number_odd
+    right: 0
+    margin-right: 20px
+
+  .sec-step-4__item-number_even
+    left: 0
+    margin-left: 20px
+
+  .table__caption-cell_size-1
+    width: 65%
+
+  .table__caption-cell_size-2
+    width: 35%
+
+  .table__line-cell_size-3
+    width: 85%
+
+  .table__line-cell_size-4
+    width: 15%
+
+  .inner-head-img__img-after-inner
+    left: 20px
+
+  .inner-head-img__img-after
+    width: 140px
+
+  .inner-head-img__img-before 
+    width: 190px
+
+  .owl-nav 
+    bottom: 240px
+
+  .text-block__h4-title 
+    padding: 20px
+
+  .text-block__items
+    padding: 10px 20px
+
+  .text-block__p-text
+    padding: 0 20px
+
+  .text-block__text
+    font-size: $fsz-text-little
+    padding: 0px 0px 10px 30px
+
+@media only screen and (max-width : 320px)
+  #modal-city-selection 
+    background: #fff
+    padding: 16px 15px 18px
+    margin: 25px auto
+    max-width: 260px
+    min-width: 260px
+    width: 260px
+
+  .sec-solutions__img-inner
+    padding-bottom: 30px
+
+  .sec-solutions__img-preview,
+  .sec-solutions__img
+    width: 100%    
+    height: 200px
+
+  .sec-solutions__img-overlay
+    &::before
+      background-size: 80px
+      margin-left: -40px
+
+  .sec-solutions__text-preview-overlay,
+  .sec-solutions__text-overlay
+    margin-top: 110px
+
+  .sec-assembly__target-text_inner
+    width: 100%
+
+  .sec-assembly__item 
+    padding-left: 20px
+    padding-top: 16px
+    padding-bottom: 16px
+
+  .item__target-text
+    padding-right: 10px
+
+  .inner-head-img__img-after-inner
+    left: 10px
+
+  .inner-head-img__img-after
+    width: 140px
+
+  .inner-head-img__img-before 
+    width: 190px
+    left: 70px
+
+  .sec-step-4__item-text
+    font-size: $fsz-text-little
+
+  .owl-nav 
+    bottom: 210px
+
+  .item-slide__img-before 
+    left: -10px
+
+  .sec-why-we__achievements-block
+    min-width: 270px
+
+/*==========  Desktop First_end  ==========*/

@@ -1,0 +1,232 @@
+// Стилизация модального окна "Города"_start
+
+.city-list
+	padding: 17px 0 0
+	margin: 0 0 35
+	list-style: none
+	font-size: 16px
+	line-height: 23px
+	color: #adadad
+
+.city-list li
+	margin: 0 0 15px	
+
+.city-list .title 
+	display: block
+	margin: 0 0 10px
+	font-size: 26px
+	line-height: 30px
+	color: #000
+
+span.title 
+	display: block
+	margin: 0 0 10px
+	font-size: 26px
+	line-height: 30px
+
+.city-list 
+	list-style: none
+	font-size: 16px
+	line-height: 23px
+	color: #adadad
+
+.city-list .title a 
+	border-bottom: 1px dashed #0245ed
+	color: inherit
+	text-decoration: none
+	&:hover 
+		border-bottom-color: transparent
+
+a 
+	color: #0245ed
+	outline: none
+	text-decoration: underline
+	transition: all ease .2s
+
+.btn-center 
+	text-align: center
+
+.btn.btn-blue::before 
+	position: absolute
+	content: ''
+	top: 100%
+	left: 0
+	right: 0
+	height: 5px
+	background: #0b37a8
+
+.popup .btn-center .btn
+	min-width: 181px
+
+.btn.btn-blue 
+	background: #0245ed
+	background: linear-gradient(to right, #0245ed 0%,#386dea 40%,#386dea 60%,#0245ed 100%)
+	color: #fff !important
+	position: relative
+	&:hover
+		background: #ec2d24
+		background: linear-gradient(to right, #ec2d24 0%,#ea6d69 40%,#ea6d69 60%,#ec2d24 100%)
+		&::before 
+			background: #a9110a
+
+.btn 
+	display: inline-block
+	vertical-align: top
+	text-decoration: none
+	padding: 8px 26px
+	cursor: pointer
+	border: none
+	font-size: 16px
+	text-align: center
+	line-height: 19px
+	background: none
+	appearance: none
+	transition: all ease .2s
+	&:active
+		transform: translate(0, 1px)
+
+.popup > .close-popup 
+	position: absolute
+	top: 25px
+	right: 29px
+	width: 19px
+	height: 19px
+	background: url('../img/modal/ico16.png') no-repeat
+	text-indent: -9999px
+	overflow: hidden
+
+.popup > .close-popup::after
+	position: absolute
+	content: ''
+	top: 0
+	left: 0
+	width: 19px
+	height: 19px
+	background: url('../img/modal/ico16.png') 0 -19px no-repeat
+	opacity: 0
+	transition: opacity ease .2s
+
+.popup > .close-popup:hover::after 
+	opacity: 1
+
+.popup > .close-popup 
+	text-indent: -9999px
+
+// Стилизация модального окна "Города"_end
+
+
+// Стилизация модального окна "Обратная связь"_start	
+
+.popup h2,
+.popup .h2 
+  margin-bottom: 31px
+  text-align: left
+
+h2
+  font-size: 40px
+  line-height: 48px
+  margin: 0 0 25px
+  margin-bottom: 25px
+  text-align: center
+
+.question-form .submit-row.type2 
+  padding-top: 7px
+
+.question-form .submit-row 
+  max-width: none
+  padding: 20px 0 0
+
+.question-form fieldset
+  margin: 0
+  padding: 0
+  border: none
+
+.question-form .row 
+  margin: 0 0 19px
+  max-width: 365px
+  position: relative
+
+.question-form input::-moz-placeholder, .question-form textarea::-moz-placeholder 
+  color: #000
+  opacity: 1
+
+.question-form input.text 
+  padding: 0 20px
+  height: 39px
+
+.question-form input.text, .question-form textarea 
+  display: block
+  width: 100%
+  border: 2px solid #b7b7b7
+  color: #000
+  font: 15px/19px 'ProximaNova', Arial, "TimesNewRoman", Verdana, sans-serif
+  box-sizing: border-box
+   
+.check-list, .check-list2 
+  padding: 0
+  margin: 0 -5px -2px
+  list-style: none
+  letter-spacing: -5px
+  font-size: 15px
+  line-height: 19px
+   
+#popup-callback .check-list li 
+  width: 100%
+
+.check-list.agreement li 
+  width: 100%
+
+.check-list li, .check-list2 li 
+  display: inline-block
+  vertical-align: top
+  letter-spacing: 0
+  width: 42%
+  padding: 0 5px
+  margin: 0 0 7px
+  box-sizing: border-box
+
+form .check-list label 
+  padding: 6px 0 0 42px
+  min-height: 34px
+  position: relative
+  width: 100%
+  display: block
+  box-sizing: border-box
+
+.check-list label, .check-list2 label 
+  cursor: pointer
+  // display: inline-block
+  vertical-align: top
+
+form .check-list .status-ico
+  position: absolute
+  top: 0
+  left: 0
+  width: 28px
+  height: 28px
+  border: 2px solid #bfbfbf
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  transition: all .3s ease
+   
+form .check-list input[type="checkbox"]:checked + .status-ico 
+  border-color: #2947e9
+  background-color: #fff
+  background-image: url('../img/modal/check.png')
+   
+.question-form input:focus::-moz-placeholder 
+  color: transparent
+
+.question-form input::-moz-placeholder, .question-form textarea::-moz-placeholder 
+  color: #000
+  opacity: 1
+
+form .check-list input[type="checkbox"] 
+  display: none   
+
+.question-form .btn 
+  padding: 12px 42px
+  font-size: 22px
+  line-height: 26px
+   
+// Стилизация модального окна "Обратная связь"_end	 

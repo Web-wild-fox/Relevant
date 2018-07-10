@@ -1,0 +1,135 @@
+/////////////////
+// header_start//
+/////////////////
+
+.header-inner
+	// background: #fff
+	z-index: 100
+	padding: 23px 0
+
+.claer
+	clear: both
+
+.container
+	max-width: 1400px
+	margin: 0 auto
+	padding: 0 40px
+
+.contacts-block .town-block a 
+	border-bottom: 1px dashed #0245ed
+	font-family: $default-font,Arial,"TimesNewRoman",Verdana,sans-serif
+	font-size: 15px
+	line-height: 20px
+	margin: 0 0 5px 24px
+	position: relative
+	text-decoration: none
+
+.contacts-block
+	float: right
+	font-size: 16px
+	line-height: 18px
+	width: 520px
+
+.contacts-block .content
+	text-align: right
+	font-family: $default-font-semibold, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+
+.column-1 
+  float: left
+  text-align: left
+
+.bespl-rus 
+	font-family: $default-font,Arial,"TimesNewRoman",Verdana,sans-serif
+	font-size: 15px
+	line-height: 22px
+	margin-bottom: 4px
+
+.contacts-block a 
+	color: #000
+	display: inline-block
+	line-height: 21px
+	margin: 0 0 5px
+	text-decoration: none
+	vertical-align: top
+	white-space: nowrap
+
+.column-2 
+	float: right
+	text-align: left
+
+.town-block
+  position: relative
+
+.town-block a::after, .town-block a::before 
+	position: absolute
+	content: ''
+	top: 0
+	left: -24px
+	width: 15px
+	height: 21px
+	background: url('../img/nav/map-marker-blue.svg') no-repeat
+	transition: opacity ease .2s
+
+.town-block a::before
+	background: url('../img/nav/map-marker-red.svg') no-repeat
+
+.town-block a:hover::before 
+  opacity: 1
+
+.town-block a:hover::after
+  opacity: 0
+
+.btn 
+	display: inline-block
+	vertical-align: top
+	text-decoration: none
+	padding: 8px 26px
+	cursor: pointer
+	border: none
+	font-size: 16px
+	text-align: center
+	line-height: 19px
+	background: none
+	appearance: none
+	transition: all ease .2s
+	&:active 
+    transform: translate(0, 1px)
+
+.btn.btn-blue 
+	background: #0245ed
+	font-family: $default-font,Arial,"TimesNewRoman",Verdana,sans-serif
+	background: linear-gradient(to right, #0245ed 0%,#386dea 40%,#386dea 60%,#0245ed 100%)
+	color: #fff
+	position: relative
+	&::before
+		position: absolute
+		content: ''
+		top: 100%
+		left: 0
+		right: 0
+		height: 5px
+		background: #0b37a8
+	&:hover
+    background: #ec2d24
+    background: linear-gradient(to right, #ec2d24 0%,#ea6d69 40%,#ea6d69 60%,#ec2d24 100%)
+
+.btn.btn-blue:hover::before 
+  background: #a9110a
+
+.contacts-block a 
+	color: #000
+	display: inline-block
+	line-height: 21px
+	margin: 0 0 5px
+	text-decoration: none
+	vertical-align: top
+	white-space: nowrap
+
+.btn-holder
+	float: right
+	margin: 0 0 0 10px
+	padding: 2px 0 0
+
+///////////////
+// header_end//
+///////////////

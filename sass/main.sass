@@ -1,0 +1,1519 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "relevant/header-relevant"
+@import "relevant/footer-relevant"
+@import "relevant/modals-relevant"
+@import "relevant/scroll-to-top-relevant"
+
+// ----------------------CUSTOM_STYLES--------------------  //
+
+// Общие элементы_start
+body
+	margin: 0
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	font-family: $default-font
+	overflow-x: hidden
+	background-color: $color-bg-light
+
+a
+	outline: none
+	transition: all ease .2s
+	&:hover
+  text-decoration: none
+
+.span-text-bold
+	font-weight: bold
+
+.h2-title
+	position: relative
+	font-family: $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-title-small
+	padding: 0
+	margin: 0
+	padding-bottom: 25px
+	padding-top: 50px
+	text-transform: uppercase
+	text-align: center
+	&::before
+		position: absolute
+		content: ''
+		bottom: 0
+		left: 50%
+		margin-left: -30px
+		display: inline-block
+		background-color: #01b9ff
+		width: 60px
+		height: 1.6px
+
+.h3-title
+	font-family: $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-title-little
+	padding: 0
+	margin: 0
+	margin-bottom: 30px
+
+// Отображение (появление) секций при скролле_start
+.sec-solutions,
+.sec-functional__shop-inner,
+.sec-functional__corp-inner,
+.sec-functional__catalog-inner,
+.sec-assembly,
+.sec-step-1,
+.sec-step-2,
+.sec-step-3,
+.sec-step-4,
+.sec-result,
+.sec-ready,
+.sec-why-we
+	// no active
+	overflow: hidden
+	opacity: 0
+	transform: translate(0, 150px)
+	transition: all .5s linear .2s
+
+.active
+	opacity: 1
+	transform: translate(0, 0)	
+// Отображение (появление) секций при скролле_end
+
+// Переопределение стилей magnific-popup_start
+#modal-city-selection 
+	max-width: 420px
+	width: 100%
+	background: #fff
+	padding: 46px 65px 48px
+	min-width: 320px
+	margin: 40px auto
+	position: relative
+
+#modal-feedback
+  background: white
+  padding: 46px 65px 48px
+  text-align: left
+  max-width: 420px
+  width: 100%
+  min-width: 320px
+  margin: 40px auto
+  position: relative
+
+// Переопределение стилей magnific-popup_end
+
+// Общие элементы_end
+
+/////////////////
+// header_start//
+/////////////////	
+
+// скрытие меню (хеадера) при скролле вниз и появление при скролле вверх_start
+#header.auto-hide-header
+  position: fixed
+  z-index: 2
+  top: 0
+  left: 0
+  width: 100%
+  /* Force Hardware Acceleration */
+  transform: translateZ(0)
+  will-change: transform
+  transition: transform .3s
+
+#header.auto-hide-header::after
+  clear: both
+  content: ""
+  display: block
+
+#header.auto-hide-header.is-hidden
+  transform: translateY(-103%)
+// скрытие меню (хеадера) при скролле вниз и появление при скролле вверх_end
+
+.navbar
+	height: 100px
+	background-color: $color-bg-light
+	box-shadow: 0 0 3px 0 rgba(0,0,0,.3)
+
+.img-logo
+	width: 180px
+	height: 46px
+	float: left
+	margin: 8px 57px 0 0
+
+///////////////
+// header_end//
+///////////////
+
+
+/////////////////////
+// sec-header_start//
+/////////////////////
+
+.sec-header
+	margin-top: 92px
+	position: relative
+	background: url('../img/sec-header/sec-header__bg.jpg') no-repeat center center
+	background-size: cover
+	z-index: -2
+	&::before
+		position: absolute
+		content: ''
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background-color: $color-bg-dark
+		opacity: .7
+		z-index: -1
+
+.middle
+  display: table-cell
+  vertical-align: middle
+
+.sec-header__inner
+	padding-left: 20%
+	margin-top: 80px
+	margin-bottom: 180px
+
+.sec-header__title
+	font-family: $default-font-semibold, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: 48px
+	text-transform: uppercase
+	color: $color-text-light
+
+.sec-header__title-light
+	font-family: $default-font-light, Arial, "TimesNewRoman", Verdana, sans-serif
+
+.sec-header__text
+	letter-spacing:	1.4px
+	margin: 0px 0px
+	padding: 4px
+	display: inline-block
+	font-size: 24px
+	background-color: #00ccff
+	color: $color-text-light
+
+///////////////////
+// sec-header_end//
+///////////////////
+
+
+//////////////////////
+// sec-solutions_start//
+//////////////////////
+
+.sec-solutions	
+	background-color: #f7f7f7
+
+.sec-solutions__container
+	font-size: 0
+
+.sec-solutions__h2-title
+	font-family: $default-font-bold, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+
+.sec-solutions__img-inner
+	padding-top: 100px
+	padding-bottom: 100px
+
+.sec-solutions__img,
+.sec-solutions__img-preview
+	position: relative
+	display: inline-block
+	margin: 0px
+	padding: 0px
+	height: 400px
+	box-shadow: inset 0px 0px 0px 1px rgba(185,185,185,1)
+	&:hover
+		outline: none
+
+.sec-solutions__img
+	width: 50%
+	&:hover .text-overlay
+		opacity: 1
+
+.sec-solutions__img-preview
+	width: 33.333%
+
+.sec-solutions__img-first
+	background: url('../img/sec-solutions/sec-solutions__img-1.jpg') no-repeat center center
+
+.sec-solutions__img-second
+	background: url('../img/sec-solutions/sec-solutions__img-2.jpg') no-repeat center center
+
+.sec-solutions__img-preview-first
+	background: url('../img/sec-solutions/sec-solutions__img-3.jpg') no-repeat center center
+
+.sec-solutions__img-preview-second
+	background: url('../img/sec-solutions/sec-solutions__img-4.jpg') no-repeat center center
+
+.sec-solutions__img-preview-third
+	background: url('../img/sec-solutions/sec-solutions__img-5.jpg') no-repeat center center
+
+.sec-solutions__img-first,
+.sec-solutions__img-second,
+.sec-solutions__img-preview-first,
+.sec-solutions__img-preview-second,
+.sec-solutions__img-preview-third
+	background-size: cover
+
+.sec-solutions__img-overlay
+	position: absolute
+	content: ''
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	// cursor: pointer
+	user-select: none
+	text-overflow: hidden
+	background-color: rgba(255, 255, 255, .9)
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5)
+	transition: all ease .3s
+	opacity: 0
+	z-index: 1
+	&::before
+		position: absolute
+		content: ''
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		background: url('../img/sec-solutions/sec-solutions__img-2_icon.png') no-repeat
+		margin-top: 65px
+		left: 50%
+		margin-left: -70px
+	&:hover
+		opacity: 1
+
+.sec-solutions__text-overlay
+	font-size: $fsz-title-little
+	text-align: center
+	margin-top: 200px
+	padding-left: 23%
+	padding-right: 23%
+
+.sec-solutions__text-preview-overlay
+	font-size: $fsz-text-huge
+
+//////////////////////
+// sec-solutions_end//
+//////////////////////
+
+
+/////////////////////////
+// sec-functional_start//
+/////////////////////////
+
+.sec-functional__h2-title
+	margin-bottom: 60px
+
+.sec-functional__shop-inner,
+.sec-functional__corp-inner,
+.sec-functional__catalog-inner
+	font-size: 0
+	margin-bottom: 60px
+
+.sec-functional__img
+	width: 34%
+	display: inline-block
+	position: relative
+
+.sec-functional__text-inner
+	width: 66%
+	display: inline-block
+	position: relative
+	vertical-align: top
+
+.sec-functional__h3-title	
+	margin-left: 30px
+
+.sec-functional__tag-inner
+	display: block
+	margin-left: 30px
+	margin-bottom: 30px
+
+.sec-functional__tag
+	position: relative
+	display: inline-block
+	color: $color-text-light
+	padding: 14px 24px
+	font-size: $fsz-text-little
+	border-radius: 100px
+	margin-right: 10px
+	margin-bottom: 10px
+	&::before
+		position: absolute
+		content: ' • '
+		font-weight: bold
+		font-size: $fsz-text-average
+		left: 8px
+		top: 11px
+
+.tag__shop
+	background-color: #66cccc
+
+.tag__corp
+	background-color: #ff9933
+
+.tag__catalog
+	background-color: #00ccff
+
+.sec-functional__p-text
+	font-family: $default-font-hint, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-text-small
+	line-height: 1.6em
+	margin-left: 30px
+	margin-bottom: 30px
+
+.sec-functional__link
+	position: relative
+	margin-left: 30px
+	margin-bottom: 30px
+	font-size: $fsz-text-average
+	&::before
+		transition: all ease .5s
+		position: absolute
+		content: ' → '
+		font-size: $fsz-text-average
+		font-family: Arial, "TimesNewRoman", Verdana, sans-serif
+		text-decoration: none
+		right: -30px
+	&:hover
+		&::before
+			transform: translateX(15px)
+
+.corp-inner__h3-title,
+.corp-inner__tag-inner,
+.corp-inner__p-text
+	margin-left: 0
+	margin-right: 30px
+
+.corp-inner__link
+	margin-left: 0
+
+///////////////////////
+// sec-functional_end//
+///////////////////////
+
+
+///////////////////////
+// sec-assembly_start//
+///////////////////////
+
+.sec-assembly
+	line-height: 2em
+
+// .sec-assembly__container
+
+// .sec-assembly__h2-title
+
+.sec-assembly__head-text
+	font-family: $default-font-semibold, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-title-little
+	text-align: center
+	margin-top: 60px
+	margin-bottom: 60px
+
+.sec-assembly__img
+	width: 100%
+	margin: 0 auto
+
+.sec-assembly__target-text_inner
+	padding-top: 60px
+	padding-bottom: 60px
+	width: 70%
+	margin: 0 auto
+
+.sec-assembly__target-text,
+.item__target-text
+	font-family: $default-font-light, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-text-small
+
+.sec-assembly__items
+	border: 1px solid #ddd
+	list-style-type: none
+	padding: 0
+	margin: 0
+	margin-bottom: 20px
+
+.sec-assembly__item
+	position: relative
+	border-bottom: 1px solid #ddd
+	padding-left: 170px
+	padding-top: 50px
+	padding-bottom: 50px
+
+.sec-assembly__item:last-child
+	border-bottom: 0px solid transparent
+
+.sec-assembly__item-icon
+	position: absolute
+	width: 40px
+	top: 50%
+	margin-top: -20px
+	left: 65px
+
+.item__target-text_bold
+	font-weight: bold
+
+.item__target-text
+	font-family: $default-font-hint, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	margin: 0
+	padding-right: 40px
+
+/////////////////////
+// sec-assembly_end//
+/////////////////////
+
+
+/////////////////////
+// sec-step-1_start//
+/////////////////////
+
+.sec-step-1__h3-title,
+.sec-step-2__h3-title,
+.sec-step-3__h3-title,
+.sec-step-4__h3-title
+	position: relative
+	font-family: $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-title-small
+	padding: 0
+	margin: 0
+	padding-bottom: 30px
+	padding-top: 50px
+	text-align: center
+	overflow: hidden
+	&::after
+		display: inline-block
+		content: ''
+		vertical-align: middle
+		font-size: $fsz-text-average
+		width: 100%
+		color: #ddd
+		margin-left: 10px
+		margin-right: -100%
+		border-bottom-style: dotted
+	&::before
+		display: inline-block
+		content: ''
+		vertical-align: middle
+		font-size: $fsz-text-average
+		width: 100%
+		color: #ddd
+		margin-right: 10px
+		margin-left: -100%
+		border-bottom-style: dotted
+
+.h4-title
+	position: relative
+	font-family: $default-font-light, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-title-little
+	padding: 0
+	margin: 0
+	margin-bottom: 30px
+	text-align: center
+
+.sec-step-1__text,
+.sec-step-2__text,
+.sec-step-3__text,
+.sec-step-4__text
+	font-family: $default-font-hint, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-text-small
+	line-height: 1.6em
+	margin-bottom: 80px
+
+.sec-step-1__img
+	width: 100%
+	margin: 0 auto
+
+.sec-step-1__img-text
+	font-family: $default-font-light, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-text-little
+	font-style: italic
+	line-height: 1.6em
+	text-align: center
+	margin: 40px 0
+
+///////////////////
+// sec-step-1_end//
+///////////////////
+
+
+/////////////////////
+// sec-step-2_start//
+/////////////////////
+
+.sec-step-2__text
+	margin-bottom: 15px
+
+.sec-step-2__items
+	margin: 0
+	padding-left: 0
+
+.sec-step-2__item
+	position: relative
+	padding-left: 40px
+	margin: 15px 0
+
+.item-icon
+	position: absolute
+	width: 26px
+	top: 50%
+	margin-top: -13px
+	left: 0
+
+.sec-step-2__item
+	list-style: none
+	line-height: 2em
+
+.sec-step-2__img-layout-inner
+	position: relative
+
+.sec-step-2__img-layout
+	display: block
+	margin: 0 auto
+	margin-top: 90px
+	margin-bottom: 40px
+	box-shadow: 0px 0px 50px -15px rgba(0,0,0,0.26)
+	// outline: 1px solid rgba(255, 255, 255, 0.4)
+
+.sec-step-2__block-layout
+	position: absolute
+	width: 360px
+
+.sec-step-2__block-layout_left
+	top: 26px
+	left: 0
+
+.sec-step-2__block-layout_right
+	top: 26px
+	right: 0
+
+.block-layout__img
+	display: block
+	margin-left: 50px
+	// margin: 0 auto
+
+.block-layout__text
+	font-family: $default-font-hint, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-text-little
+	width: 200px
+
+.block-layout__text-inner
+	position: absolute
+	right: 0
+	top: 35px
+
+.block-layout__dotted-line
+	position: absolute
+	outline: 1px dashed rgba(0,0,0,0.9)
+	display: inline-block
+	width: 140px
+	top: 26px
+
+.block-layout__dotted-line_left
+	margin-right: 8px
+	right: 0
+
+.block-layout__dotted-line_right
+	margin-left: 8px
+	left: 0	
+	top: 65px
+
+.block-layout__widget
+	top: 520px
+
+.block-layout__purchase-returns
+	top: 220px
+	right: 30px
+
+.text-inner__purchase-returns
+	position: absolute
+	width: 200px
+	height: 200px
+	border-radius: 100%
+	border: 1px solid transparent
+	&:hover
+		border: 1px solid #6633cc
+
+.purchase-returns__img
+	position: absolute
+	z-index: -1
+	right: 135px
+	top: 100px
+
+.purchase-returns__text
+	position: absolute
+	z-index: -1
+	font-family: $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-text-little*0.8
+	width: 120px
+	top: 100px
+	right: 10px
+
+.purchase-returns__dotted-line
+	top: 130px
+
+.block-layout__advantage
+	top: 430px
+	right: 20px
+
+.block-layout__product-position
+	top: 790px
+	height: 260px
+
+.product__img
+	margin-top: 10px
+	margin-left: 20px
+	z-index: 2
+
+.product__img-circle	
+	position: absolute
+	width: 210px
+	height: 210px
+	border-radius: 100%
+	top: -20px
+	left: -20px
+	z-index: 1
+	border: 1px solid transparent
+	&:hover
+		border: 1px solid #6633cc
+
+.product__text
+	position: absolute
+	bottom: 0
+
+.product__dotted-line
+	top: 90px
+
+.block-layout__stock
+	top: 1380px
+	right: 40px
+	
+.stock__img
+	position: absolute
+	margin: 0
+	right: 40px
+
+.stock__text
+	position: absolute
+	margin: 0
+	right: -20px
+	top: 200px
+
+.text-inner__stock
+	position: absolute
+	width: 210px
+	height: 210px
+	border-radius: 100%
+	top: -30px
+	right: 0
+	z-index: 1
+	border: 1px solid transparent
+	&:hover
+		border: 1px solid #6633cc
+
+.stock__dotted-line
+	width: 120px
+	top: 75px
+
+///////////////////
+// sec-step-2_end//
+///////////////////
+
+
+/////////////////////
+// sec-step-3_start//
+/////////////////////
+
+.sec-step-3__text-table-title
+	font-family: $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-text-small
+	text-align: center
+
+.sec-step-3__table
+	width: 100%
+	margin-top: 40px
+	margin-bottom: 40px
+
+.table__caption
+	background-color: #f6f9fb
+	font-size: 0
+	margin: 0
+	border: 1px solid #ddd
+
+.table__line-hide-cell
+	position: relative
+
+.table__caption-cell,
+.table__line-cell
+	font-size: 0
+	display: inline-block
+
+.table__caption-cell_size-1
+	width: 70%
+
+.table__caption-cell_size-2
+	width: 30%
+
+.table__line-cell_size-3
+	width: 95%
+
+.table__line-cell_size-4
+	width: 5%
+
+.table__line-hide-cell_size-5
+	width: 25%
+
+.table__line-hide-cell_size-6
+	width: 45%
+
+.table__line-hide-cell_size-7
+	width: 30%
+	.table__line-hide-cell-text	
+		&::before
+			width: 0px
+
+.table__caption-cell-title
+	font-family: $default-font-hint, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-text-small
+	text-align: center
+
+.table__line-cell-text_active
+	color: #01b9ff
+
+.table__line
+	cursor: pointer
+	margin: 0
+	font-size: 0
+	border: 1px solid #ddd
+	border-top: 1px solid transparent
+
+.table__line-cell_size-4
+	margin-bottom: 10px
+	text-align: center
+	vertical-align: middle
+
+.table__line-cell_btn-collapse
+	transition: all ease .3s
+	transform: rotate(-180deg)
+
+.table__line-cell_btn-collapse-active
+	transform: rotate(0deg)
+
+.table__line-hide-cell-text,
+.table__line-cell-text
+	padding: 16px
+	padding-left: 30px
+	font-family: $default-font-hint, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: 16px
+	margin: 0
+	transition: all ease .3s
+
+.table__line-hide-cell-text	
+	&::before
+		position: absolute
+		content: ''
+		width: 1px
+		height: 1000%
+		right: 0
+		top: 0
+		background-color: #ddd
+
+.table__line-cell_btn-collapse
+	display: inline-block
+	width: 20px
+
+.table__line-hide
+	position: relative
+	font-size: 0
+	padding: 0
+	margin: 0
+	border: 1px solid #ddd
+	border-top: 1px solid transparent
+	background-color: #f6f9fb
+	display: none
+	overflow: hidden
+
+.table__line-visibility
+	display: block
+
+.table__line-hide-cell
+	display: inline-block
+	font-size: 0
+	vertical-align: top
+
+///////////////////
+// sec-step-3_end//
+///////////////////
+	
+
+/////////////////////
+// sec-step-4_start//
+/////////////////////
+
+.sec-step-4__h4-title
+	font-family: $default-font-semibold, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-text-big
+	text-transform: uppercase
+
+.sec-step-4__items
+	position: relative
+	list-style-type: none
+	width: 60%
+	padding-left: 0
+	margin: 0 auto
+	margin-bottom: 80px
+
+.sec-step-4__items
+	&::before
+		position: absolute
+		content: ''
+		width: 50%
+		height: 100%
+		right: 0
+		border-bottom: 2px dashed
+		margin-top: 2px
+		border-bottom-color: #ddd
+	&::after
+		position: absolute
+		content: ''
+		width: 50%
+		height: 100%
+		top: 0
+		left: 0
+		border-top: 2px dashed
+		border-top-color: #ddd
+
+.sec-step-4__item
+	position: relative
+	margin: 2px
+
+.sec-step-4__item_odd
+	&::before
+		position: absolute
+		content: ''
+		width: 50%
+		height: 100%
+		right: 0
+		border-top-right-radius: 30px
+		border-bottom-right-radius: 30px
+		border-top: 2px dashed
+		border-top-color: #ddd
+		border-right: 2px dashed
+		border-right-color: #ddd
+		border-bottom: 2px dashed
+		border-bottom-color: #ddd
+
+.sec-step-4__item_even
+	&::before
+		position: absolute
+		content: ''
+		width: 50%
+		height: 100%
+		left: 0
+		border-top-left-radius: 30px
+		border-bottom-left-radius: 30px
+		border-left: 2px dashed
+		border-left-color: #ddd
+		border-top: 2px dashed
+		border-top-color: #ddd
+		border-bottom: 2px dashed
+		border-bottom-color: #ddd
+
+.sec-step-4__item_even:last-child
+	&::after
+		position: absolute
+		content: ''
+		bottom: -12px
+		right: -10px
+		width: 20px
+		height: 20px
+		border-radius: 100%
+		background-color: #01b9ff
+		z-index: 1
+
+.sec-step-4__item_odd:first-child
+	&::after
+		position: absolute
+		content: ''
+		top: -10px
+		left: -10px
+		width: 20px
+		height: 20px
+		border-radius: 100%
+		background-color: #01b9ff
+		z-index: 1
+
+.sec-step-4__item-text
+	font-family: $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-text-small
+	margin: 0
+	padding: 60px 120px
+	text-align: center
+
+.sec-step-4__item-number
+	p
+		margin-top: 10px
+	font-family: $default-font-bold, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-title-huge
+	position: absolute
+	display: inline-block
+	margin: 0
+	top: 50%
+	margin-top: -46px
+	color: #ebebeb
+	width: 80px
+	height: 80px
+	border: 6px solid #ebebeb
+	border-radius: 100%
+	text-align: center
+
+.sec-step-4__item-number_odd
+	right: 0
+	margin-right: 30px
+
+.sec-step-4__item-number_even
+	left: 0
+	margin-left: 30px
+
+///////////////////
+// sec-step-4_end//
+///////////////////
+
+
+/////////////////////
+// sec-result_start//
+/////////////////////
+
+.sec-result
+	background-color: #f7f7f7
+
+.sec-result__container
+	position: relative
+
+.sec-result__title,
+.slider-catalog-inner__title
+	position: absolute
+	top: 205px
+	font-family: $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-text-small
+	color: $color-text-light
+	background-color: #4fd2c2
+	padding: 20px 12px
+	border-radius: 4px
+	z-index: 1
+	&::before
+		position: absolute
+		content: ''
+		border: 40px solid transparent
+		border-bottom: 0px solid transparent
+		border-right: 0px solid transparent
+		border-left: 40px solid #4fd2c2
+		top: 12px
+		right: -22px
+		z-index: -1
+
+.sec-result__inner-head-img
+	position: relative
+	width: 60%
+	margin: 0 auto
+	margin-top: 60px
+	padding-bottom: 80px
+
+.inner-head-img__img-after-inner
+	position: relative
+	display: inline-block
+	top: 40px
+	left: 40px
+	background-color: rgba(0,0,0,.26)
+
+.inner-head-img__img-after
+	display: block
+	max-width: 380px
+	box-shadow: 0 0 50px -15px rgba(0,0,0,.26)
+	top: 0
+	left: 0
+
+.inner-head-img__img-after-overlay
+	display: block
+	position: absolute
+	content: ''
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	height: 100%
+	width: 100%
+	background-color: rgba(255,255,255,.5)
+
+.inner-head-img__img-before
+	position: absolute
+	left: 340px
+	max-width: 520px
+	box-shadow: 0 0 50px -15px rgba(0,0,0,.26)
+
+.sec-result__slider-title
+	position: relative
+	font-family: $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-title-little
+	top: 20px
+	width: 60%
+	margin: 0 auto
+	right: 40px
+
+.sec-result__slider-title_right
+	top: 20px
+	width: 60%
+	margin: 0 auto
+	left: 200px
+
+.sec-result__text-catalog-inner
+	position: relative
+
+.sec-result__text-catalog-inner_left
+	right: 120px
+
+.sec-result__text-catalog-inner_right
+	left: 120px
+
+.slider-catalog-inner__title
+	position: absolute
+	top: 20px
+	right: 10%
+	z-index: 1
+	padding: 20px 42px
+	&::before
+		position: absolute
+		content: ''
+		border: 40px solid transparent
+		border-bottom: 0px solid transparent
+		border-left: 0px solid transparent
+		border-right: 40px solid #4fd2c2
+		top: 12px
+		right: auto
+		left: -22px
+		z-index: -1
+
+.sec-result__slider-catalog-inner
+	width: 60%
+	position: relative
+	margin: 0 auto
+	z-index: 0
+
+.slider-catalog-inner__item-slide
+	position: relative
+	width: 80%	
+	margin: 0 auto
+	padding-bottom: 80px
+	padding-top: 40px
+
+.item-slide__img-after
+	position: absolute
+	width: 60%
+	box-shadow: 0 0 10px 3px rgba(0,0,0,.2)
+	top: 40px
+
+.item-slide__img-before
+	position: relative
+	width: 60%
+	box-shadow: 0 0 10px 3px rgba(0,0,0,.2)
+	top: 40px
+	left: -40px
+
+.owl-nav
+	position: relative
+	bottom: 550px
+	span
+		display: none
+
+.owl-prev,
+.owl-next
+	position: absolute
+	width: 40px
+	height: 40px
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next
+	border-radius: 100%
+	opacity: .8
+	&:hover
+		opacity: 1
+
+.owl-carousel .owl-nav button.owl-prev
+	background: url('../img/sec-result/sec-result__slider-btn-left.svg') no-repeat, #8d88ff
+	left: -10px
+
+.owl-carousel .owl-nav button.owl-next
+	background: url('../img/sec-result/sec-result__slider-btn-right.svg') no-repeat, #8d88ff
+	right: 20px
+
+.slider-catalog-inner__title_left
+	position: absolute
+	top: 20px
+	right: auto
+	left: 60px
+	z-index: 1
+	padding: 20px 22px
+	&::before
+		position: absolute
+		content: ''
+		border: 40px solid transparent
+		border-bottom: 0px solid transparent
+		border-right: 0px solid transparent
+		border-left: 40px solid #4fd2c2
+		top: 12px
+		left: auto
+		right: -22px
+		z-index: -1
+
+///////////////////
+// sec-result_end//
+///////////////////
+
+
+////////////////////
+// sec-ready_start//
+////////////////////
+
+// .sec-ready
+
+.sec-ready__container
+	padding-bottom: 40px
+
+.sec-ready__h2-title
+	margin-bottom: 40px
+
+.sec-ready__inner-plus
+	position: relative
+	display: inline-block
+	font-size: 0
+	border: 1px solid #ddd
+	margin-top: 40px
+	margin-bottom: 40px
+	padding-bottom: 40px
+
+.inner-plus__img-block
+	width: 30%
+	font-family: $default-font-semibold, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-text-big
+	display: inline-block
+	vertical-align: top
+	&::before
+		position: absolute
+		content: ''
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		width: 30%
+		height: 100%
+		z-index: -1
+
+.inner-plus__img-block_bg-color-fast
+	&::before
+		background-color: #4fd2c2
+
+.inner-plus__img-block_bg-color-profit
+	&::before
+		background-color: #d667cd
+
+.inner-plus__img-block_bg-color-protection
+	&::before
+		background-color: #01b9ff
+
+.inner-plus__img-block_bg-color-identity
+	&::before
+		background-color: #ffa642
+
+.inner-plus__img-block_bg-color-updates
+	&::before
+		background-color: #8d88ff
+
+.img-block__icon
+	position: relative
+	display: block
+	margin: 0 auto
+	top: 80px
+
+.img-block__icon-text
+	position: relative
+	top: 80px
+	display: block
+	text-transform: uppercase
+	color: $color-text-light
+	text-align: center
+
+.inner-plus__text-block
+	display: inline-block
+	width: 70%
+	overflow: hidden
+	height: 300px
+	transition: all ease .3s
+
+.text-block__h4-title
+	font-family: $default-font-semibold, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-title-small
+	padding: 40px
+	padding-bottom: 30px
+	margin: 0
+	
+.text-block__p-text
+	font-family: $default-font-hint, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-text-small
+	line-height: 1.6em
+	padding: 40px
+	padding-top: 0
+	margin: 0
+
+.sec-ready__btn-expand-curtail
+	position: absolute
+	border: 0px solid transparent
+	background-color: #8d88ff
+	cursor: pointer
+	border-radius: 100%
+	bottom: -20px
+	right: 60px
+	padding: 10px
+	width: 40px
+	height: 40px
+	transition: all ease .3s
+
+.sec-ready__btn-expand
+	transform: rotate(-45deg)
+	background-color: #c8d4dd
+
+.btn-expand-curtail__img-icon
+	padding: 0
+	margin: 0
+	width: 20px
+	height: 20px
+
+.inner-plus__text-block-expand
+	height: 100%
+
+.p-text__profit
+	padding-bottom: 15px
+
+.text-block__items
+	list-style-type: none
+	position: relative
+
+.text-block__item
+	position: relative
+	
+.text-block__item-icon
+	position: absolute
+	width: 20px
+	height: 20px
+	margin: 5px
+
+.item-icon__like
+	background: url('../img/sec-ready/sec-ready__icon-like.png') no-repeat
+
+.item-icon__purse
+	background: url('../img/sec-ready/sec-ready__icon-purse.png') no-repeat
+
+.item-icon__calc
+	background: url('../img/sec-ready/sec-ready__icon-calc.png') no-repeat
+
+.item-icon__cross
+	background: url('../img/sec-ready/sec-ready__icon-cross.svg') no-repeat
+
+.text-block__text
+	font-family: $default-font-hint, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-text-small
+	line-height: 1.6em
+	padding: 40px
+	padding-top: 0
+	padding-bottom: 15px
+	margin: 0
+
+//////////////////
+// sec-ready_end//
+//////////////////
+
+
+/////////////////////
+// sec-why-we_start//
+/////////////////////
+
+.sec-why-we
+	background-color: #f7f7f7
+
+.sec-why-we__container
+
+.sec-why-we__inner-achievements
+	font-size: 0
+	color: $color-text-light
+	padding: 80px 0
+
+.sec-why-we__achievements-block
+	position: relative
+	display: inline-block
+	width: 25%
+	font-size: $fsz-text-small
+	vertical-align: top
+	min-height: 260px
+
+.achievements-block__bg-color-browser
+	background-color: #01b9ff
+
+.achievements-block__bg-color-dev
+	background-color: #ffa642
+
+.achievements-block__bg-color-graph
+	background-color: #4fd2c2
+
+.achievements-block__bg-color-1c
+	background: url('../img/sec-why-we/sec-why-we__img-1с-bitrix.jpg') no-repeat
+	background-size: cover
+
+.achievements-block__overlay-1c
+	position: absolute
+	content: ''
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	width: 100%
+	height: 100%
+	background-color: #5f59e8
+	opacity: .7
+
+.achievements-block__icon
+	position: relative
+	display: block
+	width: 35px
+	height: 35px
+	padding: 10px
+	border-radius: 100%
+	margin: 0 auto
+	margin-top: 40px
+	margin-bottom: 20px
+
+.achievements-block__icon-browser
+	background: url('../img/sec-why-we/sec-why-we__icon-browser.svg') no-repeat center, $color-bg-light
+	background-size: 60%
+
+.achievements-block__icon-dev
+	background: url('../img/sec-why-we/sec-why-we__icon-developed.svg') no-repeat center, $color-bg-light
+	background-size: 60%
+
+.achievements-block__icon-graph
+	background: url('../img/sec-why-we/sec-why-we__icon-graph.svg') no-repeat center, $color-bg-light
+	background-size: 60%
+
+.achievements-block__icon-1c
+	background: url('../img/sec-why-we/sec-why-we__icon-1с-bitrix.svg') no-repeat center, $color-bg-light
+	background-size: 60%
+
+.achievements-block__text-bold
+	font-family: $default-font-bold, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	display: block
+	font-size: $fsz-title-small
+	text-align: center
+	margin-bottom: 6px
+	position: relative
+
+.achievements-block__text	
+	text-align: center
+	margin: 0 20px 20px 20px
+	position: relative
+
+.sec-why-we__advantage-block
+	position: relative
+	display: inline-block
+	width: 33%
+	font-size: $fsz-text-small
+	vertical-align: top
+	min-height: 260px
+	padding-bottom: 50px
+
+.advantage-block__img
+	width: 150px
+	height: 150px
+	border-radius: 50%
+	border: 1px solid #ddd
+	margin: 0 auto
+
+.advantage-block__img-experts
+	background: url('../img/sec-why-we/sec-why-we__img-experts.png') no-repeat center
+	background-size: cover
+
+.advantage-block__img-approach
+	background: url('../img/sec-why-we/sec-why-we__img-approach.png') no-repeat center
+	background-size: cover
+
+.advantage-block__img-nation
+	background: url('../img/sec-why-we/sec-why-we__img-nation.png') no-repeat center
+	background-size: cover
+
+.advantage-block__title
+	text-align: center
+	font-size: $fsz-text-average
+	padding: 0 35px
+
+.advantage-block__text
+	font-family: $default-font-hint, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-text-small
+	line-height: 1.6em
+	padding: 0 25px 0 0
+
+///////////////////
+// sec-why-we_end//
+///////////////////
+.sec-add-info__container
+	font-family: $default-font-hint, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-text-small
+	padding-top: 60px
+	padding-bottom: 80px
+
+.sec-add-info__title
+	font-family: $default-font-light, $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	font-size: $fsz-text-huge
+
+.sec-add-info__text
+
+.sec-add-info__link
+	position: relative
+	font-family: $default-font, Arial, "TimesNewRoman", Verdana, sans-serif
+	color: #245eef
+	cursor: pointer
+	display: inline-block
+	&::before 
+    transition: all ease .5s
+    position: absolute
+    content: ' → '
+    font-size: 22px
+    font-family: Arial,TimesNewRoman,Verdana,sans-serif
+    text-decoration: none
+    right: -30px
+	&:hover
+		&::before
+    	transform: translateX(15px)
+
+///////////////////////
+// sec-add-info_start//
+///////////////////////
+
+/////////////////////
+// sec-add-info_end//
+/////////////////////
+
+
+/////////////////
+// footer_start//
+/////////////////
+
+#footer
+	padding: 0
+	position: relative
+
+///////////////
+// footer_end//
+///////////////
+
+@import "media-relevant/media-header-relevant" // Always at the end
+@import "media-relevant/media-footer-relevant" // Always at the end	
+@import "media-relevant/media-modals-relevant" // Always at the end
+@import "media" // Always at the end
